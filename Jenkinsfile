@@ -12,9 +12,7 @@ pipeline {
             steps {
                 sh '''
                 cd app
-                python3 -m venv venv
-                . venv/bin/activate
-                pip install -r requirements.txt
+                pip3 install -r requirements.txt
                 '''
             }
         }
@@ -23,8 +21,7 @@ pipeline {
             steps {
                 sh '''
                 cd app
-                . venv/bin/activate
-                python manage.py test
+                python3 manage.py test
                 '''
             }
         }
