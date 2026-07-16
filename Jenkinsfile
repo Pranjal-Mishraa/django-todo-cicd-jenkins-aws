@@ -8,7 +8,7 @@ pipeline {
             }
         }
 
-        stage('Install dependencies') {
+        stage('Create venv & install deps') {
             steps {
                 sh '''
                 cd app
