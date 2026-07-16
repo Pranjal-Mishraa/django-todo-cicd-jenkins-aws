@@ -14,7 +14,7 @@ pipeline {
                 cd app
                 python3 -m venv venv
                 . venv/bin/activate
-                pip install --upgrade pip
+                python -m pip install --upgrade pip
                 pip install -r requirements.txt
                 '''
             }
@@ -25,7 +25,7 @@ pipeline {
                 sh '''
                 cd app
                 . venv/bin/activate
-                python3 manage.py test
+                python manage.py test
                 '''
             }
         }
