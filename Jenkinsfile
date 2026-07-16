@@ -11,7 +11,6 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh '''
-                cd app
                 python3 -m venv venv
                 . venv/bin/activate
                 python -m pip install --upgrade pip
@@ -23,8 +22,8 @@ pipeline {
         stage('Run tests') {
             steps {
                 sh '''
-                cd app
                 . venv/bin/activate
+                cd app
                 python manage.py test
                 '''
             }
