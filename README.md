@@ -116,5 +116,4 @@ http://<server-ip>:8000
 ## Author
 
 Pranjal Mishra – DevOps Engineer  
-LinkedIn: https://www.linkedin.com/in/-pranjal-mishra
-GitHub: Pranjal-Mishraa 
+LinkedIn: https://www.linkedin.com/in/-pranjal-mishra/
