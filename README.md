@@ -11,7 +11,7 @@ The Jenkins pipeline (`Jenkinsfile`) is defined using Declarative Pipeline synta
 - Runs Django test cases to validate the application.
 - Builds a Docker image for the application.
 - Deploys the application as a Docker container.
-- Verifies deployment by listing running containers and available images [web:23][web:21].
+- Verifies deployment by listing running containers and available images .
 
 ## Jenkinsfile Stages
 
@@ -38,7 +38,7 @@ The pipeline is composed of the following stages:
    - Stops any existing container with the same name (`${CONTAINER_NAME}`) if running.
    - Removes the stopped container to avoid name conflicts.
    - Runs a new container in detached mode (`-d`), mapping `${APP_PORT}` (default `8000`) from the container to the host:
-     - `docker run -d --name ${CONTAINER_NAME} -p ${APP_PORT}:${APP_PORT} ${IMAGE_NAME}:latest` [web:24][web:25].
+     - `docker run -d --name ${CONTAINER_NAME} -p ${APP_PORT}:${APP_PORT} ${IMAGE_NAME}:latest` .
 
 6. **Verify Deployment**
    - Runs `docker ps` to show active containers.
@@ -71,7 +71,7 @@ To run this pipeline successfully, you need:
 - Git repository containing:
   - Django TODO application code inside the `app/` directory (or your chosen `APP_DIR`).
   - `requirements.txt` file.
-  - `Dockerfile` configured to expose port 8000 and run the Django app [web:24][web:21].
+  - `Dockerfile` configured to expose port 8000 and run the Django app .
 
 ## How to Use
 
@@ -104,14 +104,14 @@ http://<server-ip>:8000
 - Automated creation of isolated Python environments per build.
 - Integration of automated tests into the pipeline to prevent bad deployments.
 - Containerization of the application with Docker.
-- Automated deployment and basic verification using Docker commands [web:23][web:27].
+- Automated deployment and basic verification using Docker commands .
 
 ## Future Enhancements
 
 - Push the Docker image to Docker Hub or a private registry.
 - Add stages for code quality tools (e.g., SonarQube).
 - Deploy the container to a cloud VM (AWS EC2) instead of local Docker.
-- Add monitoring/alerts for container health [web:24][web:27].
+- Add monitoring/alerts for container health .
 
 ## Author
 
